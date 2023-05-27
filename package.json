@@ -1,6 +1,6 @@
 {
-  "name": "chat-guard-2.0",
-  "author": "Klanter",
+  "name": "adithi-chat-guard-bot",
+  "author": "Adithi",
   "version": "2.0.0",
   "description": "Discord sunucuları için chat koruma botu",
   "main": "app.js",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KlanterV/Chat-Guard-2.0.git"
+    "url": "git+https://github.com/Adithii/Guard-Bot.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KlanterV/Chat-Guard-2.0"
+    "url": "https://github.com/Adithii/Guard-Bot/"
   },
-  "homepage": "https://github.com/KlanterV/Chat-Guard-2.0#readme",
+  "homepage": "https://github.com/Adithii/Guard-Bot#readme",
   "dependencies": {
     "discord.js": "^12.5.3",
     "mongoose": "^5.12.6"
