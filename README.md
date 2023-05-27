@@ -1,4 +1,4 @@
-# Kurulum
+# Botun Kurulumu
 * [Node.JS](https://nodejs.org/en/) Cihazınıda Node kurulu olduğuna emin olun.
 * Yeşil Code butonuna basın ve Downland zip seçeneğine tıklayın indirme işlemini bekleyin.
 * İndirme işlemi tamamlandığında zipin üstüne gelerek buraya çıkartı işaretleyin.
@@ -25,4 +25,3 @@
 * `prefix+komutlar` Yazarak tüm komutlar ve kullanımlarını görebilirsin.
 * Whitelist'e eklediğin kullanıcılar roller veya kanalların engellenmiyecek'lerini unutma.
 * Sunucunun durumunu görmek için `prefix+serverstatus` yazabilirsin.
-![Örnek](https://i.hizliresim.com/ha3wyl.png)
