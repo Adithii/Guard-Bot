@@ -1,5 +1,5 @@
 echo off
-title Chat Guard 2.0
+title Adithi Chat Guard
 color d
 cls
 :a
