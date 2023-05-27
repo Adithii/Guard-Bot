@@ -1,29 +1,29 @@
-const client = global.client;
-const db = require('./db');
-const config = require('./config');
-const { MessageEmbed } = require('discord.js');
-const { RandomColor } = require('./functionz');
+const client = global.client;// Adithi
+const db = require('./db');// Adithi
+const config = require('./config');// Adithi
+const { MessageEmbed } = require('discord.js');// Adithi
+const { RandomColor } = require('./functionz');// Adithi
+// Adithi
 
-
-client.on('message', async message => {
-    if(!message.guild || message.author.bot) return;
-    if(!message.content.startsWith(config.Prefix)) return;
-    let args = message.content.split(' ').slice(1);
-    let command = message.content.split(' ')[0].slice(config.Prefix.length);
-    if(!command) return;
-    const embed = new MessageEmbed().setColor(RandomColor(true)).setTimestamp().setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }));
-
-    if(command.toLowerCase() === 'serverstatus') {
+client.on('message', async message => {// Adithi
+    if(!message.guild || message.author.bot) return;// Adithi
+    if(!message.content.startsWith(config.Prefix)) return;// Adithi
+    let args = message.content.split(' ').slice(1);// Adithi
+    let command = message.content.split(' ')[0].slice(config.Prefix.length);// Adithi
+    if(!command) return;// Adithi
+    const embed = new MessageEmbed().setColor(RandomColor(true)).setTimestamp().setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }));// Adithi
+// Adithi
+    if(command.toLowerCase() === 'serverstatus') {// Adithi
         if(config.BotOwners.includes(message.member.id) === false && !message.member.hasPermission(8)) return message.channel.send(`\`❌\` Ayar komutlarını kullanabilmen için yönetici olman gerek.`);
-
-        const Database = await db.findOne({ ServerID: message.guild.id });
-        if(Database) {
-
-            message.channel.send(new MessageEmbed()
-                .setColor(RandomColor(true))
-                .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }))
-                .setThumbnail(message.guild.iconURL())
-                .setTimestamp()
+// Adithi
+        const Database = await db.findOne({ ServerID: message.guild.id });// Adithi
+        if(Database) {// Adithi
+// Adithi
+            message.channel.send(new MessageEmbed()// Adithi
+                .setColor(RandomColor(true))// Adithi
+                .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }))// Adithi
+                .setThumbnail(message.guild.iconURL())// Adithi
+                .setTimestamp()// Adithi
                 .setDescription(`
         __**SİSTEMLER**__
         \`•\` **Character Limit:** ${Database.CharacterLimit ? '\`✔️\`' : '\`❌\`'}
@@ -45,9 +45,9 @@ client.on('message', async message => {
         \`•\`**Log Kanalı**: ${Database.PunishLogChannelID ? "<#"+Database.PunishLogChannelID+">" : 'Log kanalı ayarlanmamış.'}
 
         \`•\`Komutları ve kullanımlarını görmek için ${config.Prefix}komutlar yazabilirsin.
-  `)).catch(() => {}); }
+  `)).catch(() => {}); }// Adithi
 
-        if(!Database) {
+        if(!Database) {// Adithi
             message.channel.send(new MessageEmbed()
                 .setColor(RandomColor(true))
                 .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }))
